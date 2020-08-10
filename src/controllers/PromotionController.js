@@ -10,7 +10,7 @@ module.exports = {
         parent_promotion: request.body.parent_promotion,
         promotion_principal_item: request.body.promotion_principal_item,
         img: request.filename
-          ? `http://localhost:3333/img/${request.filename}`
+          ? `${process.env.API_URL_IMG}${request.filename}`
           : null,
       };
 

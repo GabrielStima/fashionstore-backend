@@ -12,7 +12,7 @@ module.exports = {
         description: request.body.description,
         category: request.body.category,
         promotion_id: request.body.promotion_id,
-        img: `http://localhost:3333/img/${request.filename}`,
+        img: `${process.env.API_URL_IMG}${request.filename}`,
       };
 
       const clothes = await new Clothes(newClothes).save();

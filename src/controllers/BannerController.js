@@ -7,7 +7,7 @@ module.exports = {
     try {
       const newBanner = {
         category: request.body.category,
-        img: `http://localhost:3333/img/${request.filename}`,
+        img: `${process.env.API_URL_IMG}${request.filename}`,
       };
       const banner = await new Banner(newBanner).save();
       response.status(201).json(banner);
