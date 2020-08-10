@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 async function connectMongoDB() {
   mongoose.Promise = global.Promise;
   await mongoose
-    .connect("mongodb://localhost/fashionstore", {
+    .connect(process.env.DB_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
