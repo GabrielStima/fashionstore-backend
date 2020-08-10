@@ -5,7 +5,7 @@ const connectMongoDB = require("./database/connection");
 (async () => {
   await connectMongoDB();
   if (mongoose.connection.readyState === 1) {
-    app.listen(3333, () => {
+    app.listen(process.env.PORT || 3333, () => {
       console.log("Server online");
     });
   } else {
