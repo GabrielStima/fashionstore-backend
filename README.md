@@ -27,4 +27,4 @@ A aplicação tem as seguintes tecnologias:
  - Multer;
  - Mongo DB; 
 
-Conforme solicitado pala empresa foi utilizado o MongoDB como banco de dados;
+Conforme solicitado pela empresa foi utilizado o MongoDB como banco de dados;
